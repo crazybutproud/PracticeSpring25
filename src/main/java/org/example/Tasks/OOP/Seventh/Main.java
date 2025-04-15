@@ -7,4 +7,7 @@ package org.example.Tasks.OOP.Seventh;
 //    генерировать случайное значение из этого общего отрезка,
 //    определять в какой из наших отрезков попало значение
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }
