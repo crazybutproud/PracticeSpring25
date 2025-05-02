@@ -10,10 +10,10 @@ public class Main {
     }
 
     public static String recursion(int number) {
-        if (number < 10) {
-            return Integer.toString(number);
-        } else {
-            return recursion(number / 10) + " " + number % 10;
+        if (number < 10) { // Базовый случай: если число однозначное
+            return Integer.toString(number); // Возвращаем цифру как строку
+        } else { // Рекурсивный случай
+            return recursion(number / 10) + " " + number % 10;  // Комбинируем цифры
         }
     }
 }

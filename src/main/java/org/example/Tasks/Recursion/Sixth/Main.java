@@ -8,10 +8,10 @@ public class Main {
     }
 
     public static int recursion(int number) {
-        if (number < 10) {
-            return number;
-        } else {
-            return number % 10 + recursion(number / 10);
+        if (number < 10) { // Базовый случай: если число однозначное
+            return number; // Возвращаем само число (оно и есть его единственная цифра)
+        } else { // Рекурсивный случай
+            return number % 10 + recursion(number / 10); // Сумма последней цифры и суммы цифр оставшегося числа
         }
     }
 }

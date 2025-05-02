@@ -14,14 +14,14 @@ public class Main {
     }
 
     public static int recursion(double number) {
-        if (number == 1) {
-            return 1;
+        if (number == 1) { // Базовый случай 1: дошли до 1
+            return 1; // Значит исходное число - степень двойки
         }
-        else if (number > 1 && number < 2) {
-            return 0;
+        else if (number > 1 && number < 2) { // Базовый случай 2: получили число между 1 и 2
+            return 0; // Значит исходное число не степень двойки
         }
-        else {
-            return recursion(number / 2);
+        else { // Рекурсивный случай
+            return recursion(number / 2); // Делим число на 2 и продолжаем проверку
         }
     }
 }

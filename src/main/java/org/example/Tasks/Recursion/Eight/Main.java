@@ -9,12 +9,12 @@ public class Main {
     }
 
     public static int recursion(int number) {
-        if (number < 10) {
+        if (number < 10) { // Базовый случай: если число однозначное
 //            System.out.print(number);
-            return number;
-        } else {
-            System.out.print(number % 10 + " ");
-            return recursion(number / 10);
+            return number; // Возвращаем последнюю цифру
+        } else { // Рекурсивный случай
+            System.out.print(number % 10 + " "); // Выводим последнюю цифру и пробел
+            return recursion(number / 10); // Рекурсивно обрабатываем оставшуюся часть
         }
     }
 }

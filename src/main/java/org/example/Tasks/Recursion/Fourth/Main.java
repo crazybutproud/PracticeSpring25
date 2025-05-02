@@ -8,15 +8,15 @@ public class Main {
     }
 
     public static int recursionA(int m, int n) {
-        if (m == 0) { //базовый случай
+        if (m == 0) { // Базовый случай 1: если m = 0
             return n+1;
         }
-        if (m > 0 && n == 0 ) {
+        if (m > 0 && n == 0 ) {  // Базовый случай 2: если m > 0 и n = 0
             return recursionA(m - 1, 1);
         }
-        if (m > 0 && n > 0 ) {
+        if (m > 0 && n > 0 ) { // Рекурсивный случай: если m > 0 и n > 0
             return recursionA(m - 1, recursionA(m, n-1));
         }
-        return 0;
+        return 0; // Этот return никогда не выполнится для неотрицательных m и n
     }
 }
