@@ -10,7 +10,7 @@ public class Main {
         double[] array = generateRandomArray(100000000);
         Arrays.sort(array); // нужно сначала отсортировать
         long time = System.currentTimeMillis(); // текущее время, unix-time
-        bruteForce(array, 0.5);
+        bruteForce(array, 0.5);// вызов метода
         System.out.println(System.currentTimeMillis() - time);
 
         time = System.currentTimeMillis();
@@ -18,6 +18,7 @@ public class Main {
         System.out.println(System.currentTimeMillis() - time);
     }
 
+    //
     public static int bruteForce(double[] array, double key) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == key)
@@ -26,9 +27,11 @@ public class Main {
         return -1;
     }
 
+    //
     public static int binarySearchRecursively(double[] sortedArray, double key) {
         return binarySearchRecursively(sortedArray, key, 0, sortedArray.length);
     }
+
     private static int binarySearchRecursively
             (double[] sortedArray, double key, int low, int high) {
         int middle = (low + high) / 2; // середина
@@ -48,7 +51,7 @@ public class Main {
         }
     }
 
-
+    // генерация случайного массива
     private static double[] generateRandomArray(int length) {
         double[] array = new double[length];
         for (int i = 0; i < array.length; i++) {
